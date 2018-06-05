@@ -16,7 +16,7 @@ def find(name, fix=['Height']):
     if player is None:
         return {'match': '{0} not found.'.format(name), 'attrs': []}
 
-    attrs = np.array(player['attributes'])
+    attrs = np.array([player['Height']] + player['attributes'])
     for archetype in attributes:
         if not all(player[k] == archetype[k] for k in fix):
             continue
