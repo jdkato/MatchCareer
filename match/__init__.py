@@ -4,6 +4,13 @@ from .attributes import attributes, ordered_keys
 from .index import player_index
 
 
+def inches_to_label(height):
+    if height >= 84:
+        return "7'{0}".format(height - 84)
+    else:
+        return "6'{0}".format(height - 72)
+
+
 def find(name, fix=['Height']):
     """Find the most similar NBA 2K18 MyCareer archetype to `name`.
 
@@ -50,11 +57,14 @@ def find(name, fix=['Height']):
             match = [archetype, values]
             best = score
 
-    ret = {'attributes': match[1]}
+    ret = {'attributes': match[1],}
     for k, v in match[0].items():
         if k not in ordered_keys + ['ContactDunk', 'SpeedwithBall']:
             # HACK: Why aren't `ContactDunk` and `SpeedwithBall`
             # included?
-            ret[k] = v
+            if k == 'Height':
+                ret[k] = inches_to_label(v)
+            else:
+                ret[k] = v
 
     return {"MyCareer": ret, "exact": player, "score": round(best, 3)}
