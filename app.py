@@ -18,7 +18,7 @@ def set_access(response):
 
 @app.route('/match', methods=['POST'])
 def match():
-    matched = find(request.form['name'], request.form['fixed'])
+    matched = find(request.form['name'])
     return jsonify(matched)
 
 

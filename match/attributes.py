@@ -1,5 +1,4 @@
 ordered_keys = [
-    'Height',
     'ShotClose',
     'OpenMid',
     'ContestMid',
