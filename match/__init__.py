@@ -44,6 +44,7 @@ def find(name, fix=['Height']):
     best = 0
 
     player = player_index.get(name)
+    # TODO: Use difflib for name-matching?
     if player is None:
         return {}
 
@@ -57,7 +58,7 @@ def find(name, fix=['Height']):
             match = [archetype, values]
             best = score
 
-    ret = {'attributes': match[1],}
+    ret = {'attributes': match[1]}
     for k, v in match[0].items():
         if k not in ordered_keys + ['ContactDunk', 'SpeedwithBall']:
             # HACK: Why aren't `ContactDunk` and `SpeedwithBall`
