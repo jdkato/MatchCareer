@@ -11,11 +11,8 @@ def inches_to_label(height):
         return "6'{0}".format(height - 72)
 
 
-def find(name, fix=['Height']):
+def find(name, fix=['Height'], norm=2):
     """Find the most similar NBA 2K18 MyCareer archetype to `name`.
-
-    TODO: Add a `method` argument that uses either Ln norm or a new
-    method altogether.
 
     Arguments:
         `fix` (list[str]): A list of attributes that should be fixed.
@@ -53,7 +50,7 @@ def find(name, fix=['Height']):
         if not all(player[k] == archetype[k] for k in fix):
             continue
         values = [archetype[k] for k in ordered_keys]
-        score = np.linalg.norm((attrs - np.array(values)), ord=1)
+        score = np.linalg.norm((attrs - np.array(values)), ord=norm)
         if match is None or score < best:
             match = [archetype, values]
             best = score

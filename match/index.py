@@ -68,5 +68,40 @@ player_index = {
             'Vertical': 73,
             'Strength': 48
         }
-    }
+    },
+    'Karl-Anthony Towns': {
+        'Weight': 244,
+        'Position': 'C',
+        'Height': 82,
+        'attributes': {
+            'ShotClose': 87,
+            'OpenMid': 66,
+            'ContestMid': 70,
+            'OffDribbleMid': 65,
+            'OpenThree': 77,
+            'ContestedThree': 69,
+            'OffDribbleThree': 65,
+            'StandingLayup': 98,
+            'DrivingLayup': 97,
+            'StandingDunk': 50,
+            'DrivingDunk': 90,
+            'BallControl': 83,
+            'PassingAccuracy': 81,
+            'PostControl': 72,
+            'PostHook': 69,
+            'PostFadeaway': 69,
+            'OffensiveRebound': 58,
+            'DefensiveRebound': 86,
+            'Boxout': 88,
+            'PassPerception': 65,
+            'Steal': 72,
+            'Block': 88,
+            'ShotContest': 95,
+            'LateralQuickness': 90,
+            'Speed': 91,
+            'Acceleration': 88,
+            'Vertical': 85,
+            'Strength': 70
+        }
+    },
 }
