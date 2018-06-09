@@ -48,12 +48,12 @@ def find(name, fix=['Height']):
     if player is None:
         return {}
 
-    attrs = np.array(player['attributes'])
+    attrs = np.array([player['attributes'][k] for k in ordered_keys])
     for archetype in attributes:
         if not all(player[k] == archetype[k] for k in fix):
             continue
         values = [archetype[k] for k in ordered_keys]
-        score = np.linalg.norm((attrs - np.array(values)), ord=2)
+        score = np.linalg.norm((attrs - np.array(values)), ord=1)
         if match is None or score < best:
             match = [archetype, values]
             best = score
