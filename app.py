@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+
+from match.index import player_index
 from match import find
 
 app = Flask(__name__)
@@ -20,6 +22,11 @@ def set_access(response):
 def match():
     matched = find(request.form['name'])
     return jsonify(matched)
+
+
+@app.route('/index', methods=['GET'])
+def index():
+    return jsonify(list(player_index.keys()))
 
 
 if __name__ == '__main__':
