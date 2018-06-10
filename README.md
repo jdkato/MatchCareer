@@ -21,3 +21,9 @@ which indicates that `P1` is more similar to `P2` than `P3`.
 >>> results['MyCareer']
 {'Position': 'SG', 'Primary': 'Playmaker', 'Secondary': 'Sharpshooter', 'Height': "6'7", 'Weight': 'Default', 'Wingspan': 'Default', 'attributes': [83, 85, 85, 79, 88, 88, 82, 83, 79, 63, 66, 86, 88, 66, 66, 66, 67, 67, 65, 73, 73, 64, 64, 76, 82, 83, 69, 65],}
 ```
+
+You can also try out the [demo website](https://jdkato.github.io/MatchCareer/).
+
+## Adding Players
+
+I haven't been able to find an online source for 2K's in-game attributes&mdash;so, I've had to add them one-by-one from the game itself. If you'd like to add a player, you need to update the [index](https://github.com/jdkato/MatchCareer/blob/master/match/index.py).
