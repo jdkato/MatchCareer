@@ -11,7 +11,7 @@ def inches_to_label(height):
         return "6'{0}".format(height - 72)
 
 
-def find(name, fix=['Height'], norm=2):
+def find(name, fix=['Height', 'Position'], norm=2):
     """Find the most similar NBA 2K18 MyCareer archetype to `name`.
 
     Arguments:
