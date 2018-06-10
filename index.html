@@ -10,6 +10,7 @@
     <title>MatchCareer</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/typeaheadjs.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
 </head>
@@ -30,7 +31,7 @@
     </div>
     <div class="container">
         <div class="input-group mb-3">
-            <input type="text" id="query" class="form-control" placeholder="Enter a player's name">
+            <input data-provide="typeahead" type="text" id="query" class="form-control typeahead" placeholder="Enter a player's name">
             <div class="input-group-append">
                 <a onclick="find();" class="btn btn-outline-secondary" type="button">Find archetype</a>
             </div>
@@ -64,6 +65,8 @@
     });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/bloodhound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
 </body>

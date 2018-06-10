@@ -39,3 +39,11 @@ function find () {
     }
   })
 };
+
+var index = [
+  'Stephen Curry',
+  'Karl-Anthony Towns',
+  'Giannis Antetokounmpo'
+]
+
+$('#query').typeahead({ source: index })
