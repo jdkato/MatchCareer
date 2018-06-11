@@ -30,22 +30,24 @@
         </p>
     </div>
     <div class="container">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 pb-4">
             <input data-provide="typeahead" type="text" id="query" class="form-control typeahead" placeholder="Enter a player's name">
             <div class="input-group-append">
                 <a onclick="find();" class="btn btn-outline-secondary" type="button">Find archetype</a>
             </div>
         </div>
-        <div id="results"></div>
+        <div id="results">
+            <div id="progress" class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+        </div>
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
-            <div class="row">
                 <div class="small-1 columns">
                 </div>
                 <div class="small-9 columns">
                     <p>© <a href="https://github.com/jdkato">Joseph Kato</a>
                         <br> Attribute caps courtesy of <a href="https://www.nba2klab.com/">NBA2kLab</a>.</p>
                 </div>
-            </div>
         </footer>
     </div>
     <!-- Bootstrap core JavaScript

@@ -40,10 +40,19 @@ function find () {
   })
 };
 
+$(document).ajaxSend(function (event, request, settings) {
+  $('#progress').show()
+})
+
+$(document).ajaxComplete(function (event, request, settings) {
+  $('#progress').hide()
+})
+
 var index = [
   'Stephen Curry',
   'Karl-Anthony Towns',
   'Giannis Antetokounmpo'
 ]
 
+$('#progress').hide()
 $('#query').typeahead({ source: index })
